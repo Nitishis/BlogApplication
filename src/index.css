@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.my-btn-style {
+  @apply btn rounded-none border-[#292a60] border-2 pb-1 min-h-[2rem] h-[2rem] hover:bg-[#FC9C47] hover:border-[#292a60] text-[#292a60];
+}
+
+.fixed-image-size {
+  @apply w-[612px] h-[360px] object-cover;
+}
