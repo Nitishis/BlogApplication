@@ -107,12 +107,12 @@ const CreateBlog = () => {
       const response =
         editBlog && editBlog._id
           ? await axios.put(
-              `http://localhost:5000/api/blogs/${editBlog._id}`, // Pass the blog ID to the URL for updating
+              `https://blogapplicationbackend-n1vm.onrender.com/api/blogs/${editBlog._id}`, // Pass the blog ID to the URL for updating
               formDataToSend,
               { headers: { "Content-Type": "multipart/form-data" } }
             )
           : await axios.post(
-              "http://localhost:5000/api/blogs/create", // Use POST for creating a new blog
+              "https://blogapplicationbackend-n1vm.onrender.com/api/blogs/create", // Use POST for creating a new blog
               formDataToSend,
               { headers: { "Content-Type": "multipart/form-data" } }
             );

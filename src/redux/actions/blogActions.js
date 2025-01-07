@@ -3,7 +3,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 // Fetch Blogs - Fetches all blogs from the API
 export const fetchBlogs = createAsyncThunk("blogs/fetchBlogs", async (page = 1) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/blogs/all?page=${page}`);
+      const response = await fetch(`https://blogapplicationbackend-n1vm.onrender.com/api/blogs/all?page=${page}`);
       
       if (!response.ok) {
         throw new Error("Failed to fetch blogs");
@@ -22,7 +22,7 @@ export const deleteBlog = createAsyncThunk(
   "blogs/deleteBlog",
   async (blogId, { dispatch }) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/blogs/${blogId}`, {
+      const response = await fetch(`https://blogapplicationbackend-n1vm.onrender.com/api/blogs/${blogId}`, {
         method: "DELETE",
       });
 
@@ -50,7 +50,7 @@ export const editCurrentBlog = createAsyncThunk(
   "blogs/editCurrentBlog",
   async ({ id, blogData }) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/blogs/${id}`, {
+      const response = await fetch(`https://blogapplicationbackend-n1vm.onrender.com/api/blogs/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -79,7 +79,7 @@ export const editCurrentBlog = createAsyncThunk(
 export const markBlogAsShown = createAsyncThunk(
   'blogs/markAsShown',
   async (blogId, { dispatch }) => {
-    const response = await fetch(`http://localhost:5000/api/blogs/${blogId}/show`, {
+    const response = await fetch(`https://blogapplicationbackend-n1vm.onrender.com/api/blogs/${blogId}/show`, {
       method: 'PATCH',
     });
 

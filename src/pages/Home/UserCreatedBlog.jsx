@@ -94,7 +94,7 @@ const UserCreatedBlog = () => {
               <div className="md:flex px-1">
                 <div className="md:w-3/5">
                   <img
-                    src={`http://localhost:5000/uploads/${blog.blogImage}`}
+                    src={`https://blogapplicationbackend-n1vm.onrender.com/uploads/${blog.blogImage}`}
                     alt="Blog Image"
                     className="w-[612px] h-[360px] object-cover"
                   />
@@ -119,7 +119,7 @@ const UserCreatedBlog = () => {
                 {blog.insideBlogImage1 && (
                   <div className="my-4">
                     <img
-                      src={`http://localhost:5000/uploads/${blog.insideBlogImage1}`}
+                      src={`https://blogapplicationbackend-n1vm.onrender.com/uploads/${blog.insideBlogImage1}`}
                       alt="Inside Blog Image 1"
                       className="w-full h-auto my-4"
                     />
@@ -136,7 +136,7 @@ const UserCreatedBlog = () => {
                 {blog.insideBlogImage2 && (
                   <div className="my-4">
                     <img
-                      src={`http://localhost:5000/uploads/${blog.insideBlogImage2}`}
+                      src={`https://blogapplicationbackend-n1vm.onrender.com/uploads/${blog.insideBlogImage2}`}
                       alt="Inside Blog Image 2"
                       className="w-full h-auto my-4"
                     />
