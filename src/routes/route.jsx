@@ -3,7 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Navbar from "../components/Dashboard/Navbar";
 import Home from "../pages/Home/Home";
 import Blog from "../pages/Blog/Blog";
-import CreateBlog from "../pages/Blog/CreateBlog";
+import CreateBlog from "../pages/Blog/createBlog";
 import Footer from "../components/Dashboard/Footer";
 import Login from "../components/Login";
 import Register from "../components/Registration";
