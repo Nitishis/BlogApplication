@@ -21,7 +21,7 @@ const CreateBlog = () => {
   });
 
   const editBlog = useSelector((state) => state.blogs.editBlog);
-  console.log(editBlog);
+  // console.log(editBlog);
 
   useEffect(() => {
     const savedFormData = localStorage.getItem("createBlogFormData");

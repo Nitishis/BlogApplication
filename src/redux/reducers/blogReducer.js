@@ -71,23 +71,23 @@ const blogSlice = createSlice({
       .addCase(editCurrentBlog.fulfilled, (state, action) => {
         const blogs = Array.isArray(state.blogs) ? [...state.blogs] : [];
 
-        console.log("Action Payload ID:", action.payload._id);
-        console.log(
-          "Current State Blogs IDs:",
-          blogs.map((blog) => blog._id)
-        );
+        // console.log("Action Payload ID:", action.payload._id);
+        // console.log(
+        //   "Current State Blogs IDs:",
+        //   blogs.map((blog) => blog._id)
+        // );
 
         const index = blogs.findIndex((blog) => {
-          console.log("Comparing:", blog._id, "with", action.payload._id);
+          // console.log("Comparing:", blog._id, "with", action.payload._id);
           return blog._id.trim() === action.payload._id.trim(); // Trim to avoid whitespaces causing mismatch
         });
 
         if (index !== -1) {
-          console.log("Found blog, updating...");
+          // console.log("Found blog, updating...");
           blogs[index] = action.payload; // Update the blog in the array
           state.blogs = blogs; // Update the state with the new array
         } else {
-          console.log(`Blog with id ${action.payload._id} not found in state.`);
+          // console.log(`Blog with id ${action.payload._id} not found in state.`);
         }
 
         state.loading = false;
